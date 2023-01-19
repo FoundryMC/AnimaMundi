@@ -15,8 +15,7 @@ public class AnimaMundiQuilt implements ModInitializer {
 
         // Use Fabric to bootstrap the Common mod.
         Constants.LOG.info("Hello Quilt world!");
-        AnimaMundi.init();
-
+        AnimaMundi.Companion.init();
         // Some code like events require special initialization from the
         // loader specific code.
     }
