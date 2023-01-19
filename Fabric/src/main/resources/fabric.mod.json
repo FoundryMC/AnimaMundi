@@ -1,12 +1,12 @@
 {
     "schemaVersion": 1,
-    "id": "modid",
+    "id": "animamundi",
     "version": "${version}",
   
-    "name": "Example Mod",
+    "name": "Anima Mundi",
     "description": "This is an example description! Tell everyone what your mod is about!",
     "authors": [
-      "Me!"
+      "Foundry"
     ],
     "contact": {
       "homepage": "https://fabricmc.net/",
@@ -19,21 +19,23 @@
     "environment": "*",
     "entrypoints": {
       "main": [
-        "com.example.examplemod.ExampleMod"
+        {
+          "adapter": "kotlin",
+          "value": "foundry.animamundi.AnimaMundiFabric"
+        },
+        "foundry.animamundi.AnimaMundiFabric"
       ]
     },
     "mixins": [
-      "modid.mixins.json"
+      "animamundi.mixins.json"
     ],
   
     "depends": {
-      "fabricloader": ">=0.13",
+      "fabricloader": ">=0.14",
       "fabric": "*",
-      "minecraft": "1.18.x",
-      "java": ">=17"
-    },
-    "suggests": {
-      "another-mod": "*"
+      "minecraft": "1.19.2",
+      "java": ">=17",
+      "fabric-language-kotlin": ">=1.9.0+kotlin.1.8.0"
     }
   }
   

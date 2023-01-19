@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "quilt_loader": {
-    "group": "quilt-example-mod",
-    "id": "modid",
+    "id": "animamundi",
+    "group": "foundry",
     "version": "${version}",
     "intermediate_mappings": "net.fabricmc:intermediary",
 
-    "name": "Example Mod",
+    "name": "Anima Mundi",
     "description": "This is an example description! Tell everyone what your mod is about!",
     "authors": [
-      "Me!"
+      "Foundry"
     ],
     "contact": {
       "homepage": "https://quiltmc.org/",
@@ -22,7 +22,7 @@
     "environment": "*",
     "entrypoints": {
       "init": [
-        "com.example.examplemod.ExampleMod"
+        "foundry.animamundi.AnimaMundiQuilt"
       ]
     },
     "depends": [
@@ -36,7 +36,7 @@
       },
       {
         "id": "minecraft",
-        "version": "1.18.2"
+        "version": "1.19.2"
       },
       {
         "id": "java",
@@ -45,6 +45,6 @@
     ]
   },
   "mixin": [
-    "modid.mixins.json"
+    "animamundi.mixins.json"
   ]
 }

@@ -1,6 +1,27 @@
+buildscript {
+    ext.kotlin_version = '1.8.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies{
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+    id "org.jetbrains.kotlin.jvm" version "1.8.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
 subprojects {
     
     apply plugin: 'java'
+    apply plugin: 'kotlin'
     
     java.toolchain.languageVersion = JavaLanguageVersion.of(17)
     java.withSourcesJar()
@@ -21,6 +42,10 @@ subprojects {
                 'Build-On-Minecraft'      : minecraft_version
             ])
         }
+    }
+
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}"
     }
     
     repositories {
@@ -51,5 +76,16 @@ subprojects {
     tasks.withType(GenerateModuleMetadata) {
 
         enabled = false
+    }
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
