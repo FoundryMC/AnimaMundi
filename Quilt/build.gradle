@@ -54,6 +54,14 @@ tasks.withType(JavaCompile) {
     source(project(":Common").sourceSets.main.allSource)
 }
 
+compileKotlin {
+	source(project(":Common").sourceSets.main.kotlin)
+}
+
+sourcesJar {
+	from project(":Common").sourceSets.main.kotlin
+}
+
 jar {
 	from("LICENSE") {
 		rename { "${it}_${mod_name}"}
