@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lava",
+    "minecraft:campfire",
+    "minecraft:fire",
+	"minecraft:magma_block",
+	"farmersdelight:stove",
+	"nethersdelight:blackstone_stove"
+  ]
+}
