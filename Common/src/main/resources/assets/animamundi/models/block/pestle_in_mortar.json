@@ -1,0 +1,74 @@
+{
+	"credit": "Made by Farcr",
+	"textures": {
+		"0": "animamundi:block/mortar_pestle",
+		"particle": "animamundi:block/mortar_pestle"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 6],
+			"to": [10, 8, 10],
+			"faces": {
+				"north": {"uv": [2, 7, 6, 15], "texture": "#0"},
+				"east": {"uv": [2, 7, 6, 15], "texture": "#0"},
+				"south": {"uv": [2, 7, 6, 15], "texture": "#0"},
+				"west": {"uv": [2, 7, 6, 15], "texture": "#0"},
+				"up": {"uv": [7, 11, 11, 15], "texture": "#0"},
+				"down": {"uv": [7, 11, 11, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 8, 7],
+			"to": [9, 12, 9],
+			"faces": {
+				"north": {"uv": [3, 3, 5, 7], "texture": "#0"},
+				"east": {"uv": [3, 3, 5, 7], "texture": "#0"},
+				"south": {"uv": [3, 3, 5, 7], "texture": "#0"},
+				"west": {"uv": [3, 3, 5, 7], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 12, 6],
+			"to": [10, 14, 10],
+			"faces": {
+				"north": {"uv": [2, 1, 6, 3], "texture": "#0"},
+				"east": {"uv": [2, 1, 6, 3], "texture": "#0"},
+				"south": {"uv": [2, 1, 6, 3], "texture": "#0"},
+				"west": {"uv": [2, 1, 6, 3], "texture": "#0"},
+				"up": {"uv": [7, 1, 11, 5], "texture": "#0"},
+				"down": {"uv": [7, 11, 11, 15], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}
