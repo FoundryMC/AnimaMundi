@@ -20,6 +20,9 @@ repositories {
 			includeGroupByRegex 'org\\.quiltmc\\.qsl(?:\\.[a-z_]+)?'
 		}
 	}
+	maven { url = "https://maven.tterrag.com/" }
+	maven { url = "https://mvn.devos.one/snapshots/"}
+	maven { url = "https://jitpack.io/" }
 }
 
 dependencies {
@@ -32,8 +35,9 @@ dependencies {
 		exclude group: "net.fabricmc"
 	}
 
-	modImplementation "org.quiltmc.quilt-kotlin-libraries:quilt-kotlin-libraries:${quilt_kotlin_verion}"
+	modImplementation (include("org.quiltmc.quilt-kotlin-libraries:quilt-kotlin-libraries:${quilt_kotlin_verion}"))
 	modImplementation "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${quilt_fapi_version}-${minecraft_version}"
+	modImplementation(include("com.tterrag.registrate_fabric:Registrate:${registrate_version}"))
 
 	implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 	implementation project(":Common")

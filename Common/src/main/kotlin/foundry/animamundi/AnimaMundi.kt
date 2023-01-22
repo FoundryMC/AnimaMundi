@@ -1,10 +1,13 @@
 package foundry.animamundi
 
+import com.tterrag.registrate.Registrate
+
 class AnimaMundi {
     companion object {
-        const val MOD_ID = "animamundi"
-        const val MOD_NAME = "Anima Mundi"
-        private const val MOD_VERSION = "1.0.0"
+        const val MOD_ID: String = "animamundi"
+        var REGISTRATE: Registrate = Registrate.create(MOD_ID)
+        const val MOD_NAME: String = "Anima Mundi"
+        const val MOD_VERSION = "1.0.0"
 
         const val MOD_GROUP = "foundry"
         fun init() {
@@ -16,6 +19,5 @@ class AnimaMundi {
     init {
         init()
     }
-
 
 }

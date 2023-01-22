@@ -3,7 +3,7 @@
   "quilt_loader": {
     "id": "animamundi",
     "group": "foundry",
-    "version": "${version}",
+    "version": "1.0.0",
     "intermediate_mappings": "net.fabricmc:intermediary",
 
     "name": "Anima Mundi",

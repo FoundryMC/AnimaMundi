@@ -21,9 +21,16 @@ minecraft {
     }
 }
 
+repositories {
+    maven { url = "https://maven.tterrag.com/" }
+    maven { url = "https://mvn.devos.one/snapshots/"}
+    maven { url = "https://jitpack.io/" }
+}
+
 dependencies {
      compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
      implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    implementation("com.tterrag.registrate_fabric:Registrate:${registrate_version}")
 }
 
 processResources {

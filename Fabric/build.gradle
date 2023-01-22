@@ -6,12 +6,20 @@ plugins {
 
 archivesBaseName = "${mod_name}-fabric-${minecraft_version}"
 
+repositories {
+    maven { url = "https://maven.tterrag.com/" }
+    maven { url = "https://mvn.devos.one/snapshots/"}
+    maven { url = "https://jitpack.io/" }
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation("net.fabricmc:fabric-language-kotlin:${fabric_kotlin_version}")
+    modImplementation(include("net.fabricmc:fabric-language-kotlin:${fabric_kotlin_version}"))
+    modImplementation(include("com.tterrag.registrate_fabric:Registrate:${registrate_version}"))
+
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":Common")
 }
