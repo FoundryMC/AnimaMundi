@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cGc",
+        "c c",
+        "iii"
+    ],
+    "key": {
+        "c": {
+            "item": "minecraft:copper_ingot"
+        },
+        "G": {
+            "item": "minecraft:glass_bottle"
+        },
+        "i": {
+            "item": "animamundi:silver_ingot"
+        }
+    },
+    "result": {
+        "item": "animamundi:alembic",
+        "count": 1
+    }
+}
