@@ -13,15 +13,15 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 
     // Adds the Kotlin Gradle plugin
-    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
     // OPTIONAL Kotlin Serialization plugin
-    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.0'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.0'
 }
 
 apply plugin: 'org.spongepowered.mixin'
 
 group = 'foundry'
-version = '1.0-SNAPSHOT'
+version = '1.0.0'
 
 java {
     archivesBaseName = 'animamundi'
@@ -180,7 +180,7 @@ dependencies {
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation 'thedarkcolour:kotlinforforge:3.10.0'
+    implementation 'thedarkcolour:kotlinforforge:3.9.1'
 
     def registrate = "com.tterrag.registrate:Registrate:MC1.19-${registrate_version}"
     implementation fg.deobf(registrate)
@@ -200,6 +200,10 @@ jar {
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "17"
 }
 
 jar.finalizedBy('reobfJar')
