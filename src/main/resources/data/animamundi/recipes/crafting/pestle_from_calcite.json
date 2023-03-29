@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " #D",
+        " D#",
+        "D  "
+    ],
+    "key": {
+        "#": {
+            "item": "animamundi:silver_nugget"
+        },
+        "D": {
+            "item": "minecraft:calcite"
+        }
+    },
+    "result": {
+        "item": "animamundi:pestle",
+        "count": 1
+    },
+    "group": "pestle"
+}
