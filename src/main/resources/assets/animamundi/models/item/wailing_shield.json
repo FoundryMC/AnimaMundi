@@ -2,8 +2,8 @@
 	"credit": "Made by Farcr",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "animamundi:item/wailing_shield_model",
-		"particle": "animamundi:item/wailing_shield_model"
+		"1": "animamundi:item/wailing_shield",
+		"particle": "animamundi:item/wailing_shield"
 	},
 	"elements": [
 		{

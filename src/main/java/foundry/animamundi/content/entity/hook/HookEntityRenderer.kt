@@ -36,9 +36,9 @@ class HookEntityRenderer(ctx: EntityRendererProvider.Context?) : EntityRenderer<
         val prevPoints = entity.prevPoints
 
         if(points.size > 1)
-            for (i in 0 until prevPoints.size - 1) {
+            for (i in 0 until (prevPoints.size - 1)) {
                 var a = prevPoints[i] + (points[i] - prevPoints[i]) * pt
-                var b = prevPoints[i + 1] + (points[i + 1] - prevPoints[i + 1]) * pt
+                var b = prevPoints[i + 1]  + (points[i + 1] - prevPoints[i + 1]) * pt
 
                 renderCuboidLine(ps, buffer, a, b, a.distanceTo(b))
             }

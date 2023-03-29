@@ -6,7 +6,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
 
 @Mod.EventBusSubscriber(modid = AnimaMundi.MODID)
-class CrossModEvents {
+object CrossModEvents {
 
     @SubscribeEvent
     fun alembicSetup(event: AlembicSetupEvent){
