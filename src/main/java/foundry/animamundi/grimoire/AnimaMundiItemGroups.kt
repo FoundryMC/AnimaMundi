@@ -5,9 +5,9 @@ import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 
 object AnimaMundiItemGroups {
-    val MAIN_GROUP: CreativeModeTab = object : CreativeModeTab("main_group") {
+    val MAIN_GROUP: CreativeModeTab = object : CreativeModeTab("animamundi.main_group") {
         override fun makeIcon(): ItemStack {
-            return ItemStack(AnimaMundiItems.SIMPLE_GRAPPLING_HOOK.get())
+            return ItemStack(AnimaMundiItems.SEDATIVE.get())
         }
     }
 }

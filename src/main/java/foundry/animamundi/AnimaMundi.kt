@@ -18,6 +18,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
+import thedarkcolour.kotlinforforge.forge.MOD_BUS
+import thedarkcolour.kotlinforforge.forge.runForDist
 
 @Mod(AnimaMundi.MODID)
 class AnimaMundi {
@@ -28,6 +30,14 @@ class AnimaMundi {
         register()
         AnimaMundiEntities.register()
         AnimaMundiNetworking.init()
+
+        runForDist(
+            clientTarget = {
+            AnimaMundiClient.init()
+            },
+            serverTarget = {
+
+            })
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {}

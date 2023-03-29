@@ -12,11 +12,12 @@ import net.minecraftforge.event.TickEvent.PlayerTickEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 
-object ForgeCommonEvents{
-    fun attachCaps(event: AttachCapabilitiesEvent<Entity>) {
-        event.addCapability(AnimaMundi.path("antidote_counter"), AntidoteCounterProvider())
-    }
-    fun playerTick(event: PlayerTickEvent) {
-        AntidoteItem.tick(event.player)
-    }
+@SubscribeEvent
+fun attachCaps(event: AttachCapabilitiesEvent<Entity>) {
+    if(event.`object` is Player) event.addCapability(AnimaMundi.path("antidote_counter"), AntidoteCounterProvider())
+}
+
+@SubscribeEvent
+fun playerTick(event: PlayerTickEvent) {
+    AntidoteItem.tick(event.player)
 }
