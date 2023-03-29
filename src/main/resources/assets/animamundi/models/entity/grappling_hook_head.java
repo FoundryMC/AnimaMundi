@@ -3,7 +3,7 @@
 // Paste this class into your mod and generate all required imports
 
 
-public class grappling_hook_head - Converted<T extends Entity> extends EntityModel<T> {
+public class grappling_hook_head<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "grappling_hook_head_- converted"), "main");
 	private final ModelPart bb_main;
