@@ -1,17 +1,16 @@
 package foundry.animamundi.content.entity.hook
 
-import foundry.animamundi.div
+import foundry.animamundi.extensions.div
 import foundry.animamundi.grimoire.AnimaMundiNetworking
 import foundry.animamundi.math.collideSphereAABB
-import foundry.animamundi.minus
-import foundry.animamundi.plus
-import foundry.animamundi.times
+import foundry.animamundi.extensions.minus
+import foundry.animamundi.extensions.plus
+import foundry.animamundi.extensions.times
 import net.minecraft.core.BlockPos
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.protocol.Packet
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
-import net.minecraft.world.level.ChunkPos
 import net.minecraft.world.level.Level
 import net.minecraft.world.phys.Vec3
 import net.minecraftforge.network.NetworkHooks

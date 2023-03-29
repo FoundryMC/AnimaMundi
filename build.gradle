@@ -164,9 +164,24 @@ repositories {
 
     maven { url 'https://jitpack.io' }
 
-    mavenLocal()
 
     maven { url = 'https://maven.parchmentmc.org' }
+    maven { url = 'https://maven.blamejared.com' }
+    maven {
+        name = "TslatEntityStatus (TES) Maven Repo"
+        url = "https://dl.cloudsmith.io/public/tslat/tes/maven/"
+    }
+    maven {
+        name = "TslatEntityStatus (TEL) Maven Repo"
+        url = "https://dl.cloudsmith.io/public/tslat/tel/maven/"
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    mavenLocal()
 }
 
 dependencies {
@@ -191,11 +206,27 @@ dependencies {
 
     implementation 'thedarkcolour:kotlinforforge:3.9.1'
 
+    implementation fg.deobf("foundry:alembic:${project.alembic_version}")
+    implementation fg.deobf("foundry.veil:Veil-forge-${project.minecraft_version}:${project.veil_version}")
+
     def registrate = "com.tterrag.registrate:Registrate:MC1.19-${registrate_version}"
     implementation fg.deobf(registrate)
     //shade registrate
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.0")
+
+    implementation fg.deobf("net.tslat.effectslib:TslatEffectsLib-forge-1.19.3:${project.tel_version}")
+    implementation fg.deobf("net.tslat.tes:TES-forge-${project.minecraft_version}:${project.tes_version}")
+    implementation fg.deobf("curse.maven:attributetooltipfix-658833:3932463")
+    implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-common:0.2.0-beta.6"))
+    implementation(jarJar("com.github.llamalad7.mixinextras:mixinextras-forge:0.2.0-beta.6")) {
+        jarJar.ranged(it, "[0.2.0-beta.6,)")
+    }
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    if (System.getProperty("idea.sync.active") != "true") {
+        annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    }
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -216,7 +247,15 @@ jar {
 compileKotlin {
     kotlinOptions.jvmTarget = "17"
 }
+jarJar.enable()
 
+reobf {
+    jarJar{}
+}
+
+tasks.assemble {
+    dependsOn(tasks.jarJar)
+}
 jar.finalizedBy('reobfJar')
 
 tasks.withType(JavaCompile).configureEach {

@@ -6,9 +6,9 @@ import com.mojang.math.Matrix3f
 import com.mojang.math.Vector3f
 import foundry.animamundi.AnimaMundi
 import foundry.animamundi.math.VecUtil
-import foundry.animamundi.minus
-import foundry.animamundi.plus
-import foundry.animamundi.times
+import foundry.animamundi.extensions.minus
+import foundry.animamundi.extensions.plus
+import foundry.animamundi.extensions.times
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.culling.Frustum

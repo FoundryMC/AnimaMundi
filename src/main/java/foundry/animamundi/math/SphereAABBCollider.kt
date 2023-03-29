@@ -1,6 +1,6 @@
 package foundry.animamundi.math
 
-import foundry.animamundi.closestPoint
+import foundry.animamundi.extensions.closestPoint
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
 

@@ -1,4 +1,4 @@
-package foundry.animamundi
+package foundry.animamundi.extensions
 
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3

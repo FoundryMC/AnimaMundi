@@ -1,4 +1,4 @@
-package foundry.animamundi.content.item
+package foundry.animamundi.content.item.grapple
 
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResultHolder
