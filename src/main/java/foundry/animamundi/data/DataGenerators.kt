@@ -15,5 +15,6 @@ class DataGenerators {
         var generator = event.generator
         var existingFileHelper = event.existingFileHelper
         generator.addProvider(event.includeClient(), AnimaMundiItemModels(generator, existingFileHelper))
+        generator.addProvider(event.includeClient(), AnimaMundiBlockStates(generator, AnimaMundi.MODID, existingFileHelper))
     }
 }

@@ -1,5 +1,6 @@
 {
-  "itemGroup.animamundi.main_group": "Anima Mundi",
+  "block.animamundi.alembic": "Alembic",
+  "block.animamundi.alembic.progess_tooltip": "Progress: %s",
   "entity.animamundi.hook": "Hook",
   "item.animamundi.antidote": "Antidote",
   "item.animamundi.antimony_axe": "Antimony Axe",

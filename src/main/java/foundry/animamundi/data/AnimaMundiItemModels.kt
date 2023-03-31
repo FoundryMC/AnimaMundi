@@ -1,6 +1,7 @@
 package foundry.animamundi.data
 
 import foundry.animamundi.AnimaMundi
+import foundry.animamundi.grimoire.AnimaMundiBlocks.ALEMBIC
 import foundry.animamundi.grimoire.AnimaMundiItems.ANTIDOTE
 import foundry.animamundi.grimoire.AnimaMundiItems.ANTIMONY_AXE
 import foundry.animamundi.grimoire.AnimaMundiItems.ANTIMONY_HOE
@@ -56,6 +57,8 @@ class AnimaMundiItemModels(generator: DataGenerator, existingFileHelper: Existin
         registerToolItemModel(ANTIMONY_SHOVEL.id.path)
         registerToolItemModel(ANTIMONY_HOE.id.path)
         registerToolItemModel(ANTIMONY_SWORD.id.path)
+
+        registerBlockItemModel(ALEMBIC.id.path)
     }
 
     fun registerBasicItemModel(item: String){
@@ -64,5 +67,9 @@ class AnimaMundiItemModels(generator: DataGenerator, existingFileHelper: Existin
 
     fun registerToolItemModel(item: String){
         withExistingParent(item, ResourceLocation("minecraft", "item/handheld")).texture("layer0", ResourceLocation(AnimaMundi.MODID, "item/$item"))
+    }
+
+    fun registerBlockItemModel(block: String){
+        withExistingParent(block, AnimaMundi.path("block/$block"))
     }
 }
