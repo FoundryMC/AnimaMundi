@@ -1,6 +1,8 @@
 {
   "block.animamundi.alembic": "Alembic",
-  "block.animamundi.alembic.progess_tooltip": "Progress: %s",
+  "block.animamundi.alembic.progress_tooltip": "Progress: %s",
+  "block.animamundi.mortar": "Mortar",
+  "block.animamundi.mortar.progress_tooltip": "Grind Progress: %s",
   "entity.animamundi.hook": "Hook",
   "item.animamundi.antidote": "Antidote",
   "item.animamundi.antimony_axe": "Antimony Axe",

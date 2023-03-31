@@ -13,6 +13,7 @@ class AnimaMundiBlockStates(gen: DataGenerator?, modid: String?, exFileHelper: E
 ) {
     override fun registerStatesAndModels() {
         simpleBlock(AnimaMundiBlocks.ALEMBIC.get())
+        simpleBlock(AnimaMundiBlocks.MORTAR.get())
     }
 
 }

@@ -5,6 +5,7 @@ import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import foundry.animamundi.AnimaMundi;
 import foundry.animamundi.content.block.alembic.AlembicBlockEntity;
 import foundry.animamundi.content.block.alembic.AlembicBlockEntityRenderer;
+import foundry.animamundi.content.block.mortar.MortarBlockEntity;
 
 
 public class AnimaMundiBlockEntities {
@@ -15,5 +16,9 @@ public class AnimaMundiBlockEntities {
     public static BlockEntityEntry<AlembicBlockEntity> ALEMBIC = REGISTRATE.blockEntity("alembic", AlembicBlockEntity::new)
             .validBlock(AnimaMundiBlocks.ALEMBIC)
             .renderer(() -> AlembicBlockEntityRenderer::new)
+            .register();
+
+    public static BlockEntityEntry<MortarBlockEntity> MORTAR = REGISTRATE.blockEntity("mortar", MortarBlockEntity::new)
+            .validBlock(AnimaMundiBlocks.MORTAR)
             .register();
 }

@@ -2,6 +2,7 @@ package foundry.animamundi.data
 
 import foundry.animamundi.AnimaMundi
 import foundry.animamundi.grimoire.AnimaMundiBlocks.ALEMBIC
+import foundry.animamundi.grimoire.AnimaMundiBlocks.MORTAR
 import foundry.animamundi.grimoire.AnimaMundiItems.ANTIDOTE
 import foundry.animamundi.grimoire.AnimaMundiItems.ANTIMONY_AXE
 import foundry.animamundi.grimoire.AnimaMundiItems.ANTIMONY_HOE
@@ -59,6 +60,7 @@ class AnimaMundiItemModels(generator: DataGenerator, existingFileHelper: Existin
         registerToolItemModel(ANTIMONY_SWORD.id.path)
 
         registerBlockItemModel(ALEMBIC.id.path)
+        registerBlockItemModel(MORTAR.id.path)
     }
 
     fun registerBasicItemModel(item: String){

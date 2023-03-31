@@ -2,12 +2,12 @@
 	"credit": "Made by Farcr",
 	"parent": "block",
 	"textures": {
-		"1": "block/mortar_side",
-		"2": "block/mortar_top",
-		"3": "block/mortar_bottom",
-		"4": "block/mortar_inside_bottom",
-		"5": "block/mortar_inside",
-		"particle": "block/mortar_inside_bottom"
+		"1": "animamundi:block/mortar_side",
+		"2": "animamundi:block/mortar_top",
+		"3": "animamundi:block/mortar_bottom",
+		"4": "animamundi:block/mortar_inside_bottom",
+		"5": "animamundi:block/mortar_inside",
+		"particle": "animamundi:block/mortar_inside_bottom"
 	},
 	"elements": [
 		{
