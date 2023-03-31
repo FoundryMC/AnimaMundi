@@ -3,8 +3,9 @@ package foundry.animamundi
 import com.mojang.logging.LogUtils
 import com.tterrag.registrate.Registrate
 import com.tterrag.registrate.util.nullness.NonNullSupplier
-import foundry.animamundi.AnimaMundi
 import foundry.animamundi.content.compat.alembic.CodecUtil
+import foundry.animamundi.grimoire.AnimaMundiBlockEntities
+import foundry.animamundi.grimoire.AnimaMundiBlocks
 import foundry.animamundi.grimoire.AnimaMundiEntities
 import foundry.animamundi.grimoire.AnimaMundiItems.register
 import foundry.animamundi.grimoire.AnimaMundiNetworking
@@ -18,6 +19,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
+import thedarkcolour.kotlinforforge.forge.runForDist
 
 @Mod(AnimaMundi.MODID)
 class AnimaMundi {
@@ -28,6 +30,16 @@ class AnimaMundi {
         register()
         AnimaMundiEntities.register()
         AnimaMundiNetworking.init()
+        AnimaMundiBlockEntities.init()
+        AnimaMundiBlocks.init()
+
+        runForDist(
+            clientTarget = {
+            AnimaMundiClient.init()
+            },
+            serverTarget = {
+
+            })
     }
 
     private fun commonSetup(event: FMLCommonSetupEvent) {}

@@ -1,7 +1,9 @@
 package foundry.animamundi.grimoire
 
+import com.tterrag.registrate.util.entry.BlockEntry
 import com.tterrag.registrate.util.entry.ItemEntry
 import foundry.animamundi.AnimaMundi
+import foundry.animamundi.content.block.alembic.AlembicBlock
 import foundry.animamundi.content.item.AnimaMundiItemMaterials
 import foundry.animamundi.content.item.antidote.AntidoteItem
 import foundry.animamundi.content.item.grapple.SimpleGrapplingHook
@@ -15,12 +17,16 @@ import net.minecraft.world.item.PickaxeItem
 import net.minecraft.world.item.ShieldItem
 import net.minecraft.world.item.ShovelItem
 import net.minecraft.world.item.SwordItem
+import net.minecraft.world.level.block.state.BlockBehaviour
+import net.minecraft.world.level.material.Material
+import net.minecraft.world.level.material.MaterialColor
 
 object AnimaMundiItems {
 
-    private val REGISTRATE = AnimaMundi.registrate()
+    val REGISTRATE = AnimaMundi.registrate()
         .creativeModeTab { AnimaMundiItemGroups.MAIN_GROUP }
 
+    fun getRegister() = REGISTRATE
     fun register() {
 
     }

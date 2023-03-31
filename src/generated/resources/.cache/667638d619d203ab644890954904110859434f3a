@@ -1,6 +1,9 @@
-// 1.19.2	2023-03-29T13:55:18.2097064	Registrate Provider for animamundi [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
-7adad8144152c0cd8cdc06f1051b266ee7efc3d9 assets/animamundi/lang/en_ud.json
-ff0e8106206c09bc245524b71fe20b4faaa4e405 assets/animamundi/lang/en_us.json
+// 1.19.2	2023-03-30T14:05:54.7330542	Registrate Provider for animamundi [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+cb719601fc01d51dd6e71a6b07a2a16479abf393 assets/animamundi/blockstates/alembic.json
+3a2283c96d4ed86a7453f66613d0641559002cd5 assets/animamundi/lang/en_ud.json
+022b0b4fcb276b3390665272ff06793783279db2 assets/animamundi/lang/en_us.json
+77dd5bf3641721c7313b06bb24e2c34b3f818cfe assets/animamundi/models/block/alembic.json
+2b9c8ed1c0e70682cb7ef7bc12309ec265b4d08d assets/animamundi/models/item/alembic.json
 578a47bf948f56b3a90b4b79dd06025b8081dc70 assets/animamundi/models/item/antidote.json
 7099f8c43786f064d64be971fcb85337e00f9bda assets/animamundi/models/item/antimony_axe.json
 6d84874bea12fd384854ff1369da70d7db12293d assets/animamundi/models/item/antimony_hoe.json
@@ -29,3 +32,4 @@ ccfe231f829a80119d9aa499b003ff8b65311ec1 assets/animamundi/models/item/silver_pi
 6d8f366a4d1e8e25de7524e01d177ab3cea026f8 assets/animamundi/models/item/simple_grappling_hook.json
 6aa2099aafbf3efba0ba8dd8ba24e9936908017a assets/animamundi/models/item/toxin.json
 25cf5a393c6e15b09e9f1dfa2cb5961eecdcedd6 assets/animamundi/models/item/wailing_shield.json
+77c4c07b834d5cefb3be42d1bf6b3cce44d477f9 data/animamundi/loot_tables/blocks/alembic.json
