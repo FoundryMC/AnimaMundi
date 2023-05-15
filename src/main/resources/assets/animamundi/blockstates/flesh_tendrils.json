@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": [
+	  { "model": "anima_mundi:block/flesh_tendrils_0" },
+	  { "model": "anima_mundi:block/flesh_tendrils_1" }
+	]
+  }
+}
