@@ -1,8 +1,6 @@
 {
   "block.animamundi.alembic": "Alembic",
-  "block.animamundi.alembic.progress_tooltip": "Progress: %s",
   "block.animamundi.mortar": "Mortar",
-  "block.animamundi.mortar.progress_tooltip": "Grind Progress: %s",
   "entity.animamundi.hook": "Hook",
   "item.animamundi.antidote": "Antidote",
   "item.animamundi.antimony_axe": "Antimony Axe",
@@ -19,17 +17,12 @@
   "item.animamundi.raw_silver": "Raw Silver",
   "item.animamundi.sedative": "Sedative",
   "item.animamundi.silver_axe": "Silver Axe",
-  "item.animamundi.silver_boots": "Silver Boots",
-  "item.animamundi.silver_chestplate": "Silver Chestplate",
-  "item.animamundi.silver_helmet": "Silver Helmet",
   "item.animamundi.silver_hoe": "Silver Hoe",
   "item.animamundi.silver_ingot": "Silver Ingot",
-  "item.animamundi.silver_leggings": "Silver Leggings",
   "item.animamundi.silver_nugget": "Silver Nugget",
   "item.animamundi.silver_pickaxe": "Silver Pickaxe",
   "item.animamundi.silver_shovel": "Silver Shovel",
   "item.animamundi.silver_sword": "Silver Sword",
-  "item.animamundi.simple_grappling_hook": "Simple Grappling Hook",
   "item.animamundi.toxin": "Toxin",
   "item.animamundi.wailing_shield": "Wailing Shield"
 }

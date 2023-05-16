@@ -1,5 +1,6 @@
 {
   "block.animamundi.alembic": "ɔıqɯǝןⱯ",
+  "block.animamundi.mortar": "ɹɐʇɹoW",
   "entity.animamundi.hook": "ʞooH",
   "item.animamundi.antidote": "ǝʇopıʇuⱯ",
   "item.animamundi.antimony_axe": "ǝxⱯ ʎuoɯıʇuⱯ",
@@ -16,17 +17,12 @@
   "item.animamundi.raw_silver": "ɹǝʌןıS ʍɐᴚ",
   "item.animamundi.sedative": "ǝʌıʇɐpǝS",
   "item.animamundi.silver_axe": "ǝxⱯ ɹǝʌןıS",
-  "item.animamundi.silver_boots": "sʇooᗺ ɹǝʌןıS",
-  "item.animamundi.silver_chestplate": "ǝʇɐןdʇsǝɥƆ ɹǝʌןıS",
-  "item.animamundi.silver_helmet": "ʇǝɯןǝH ɹǝʌןıS",
   "item.animamundi.silver_hoe": "ǝoH ɹǝʌןıS",
   "item.animamundi.silver_ingot": "ʇobuI ɹǝʌןıS",
-  "item.animamundi.silver_leggings": "sbuıbbǝꞀ ɹǝʌןıS",
   "item.animamundi.silver_nugget": "ʇǝbbnN ɹǝʌןıS",
   "item.animamundi.silver_pickaxe": "ǝxɐʞɔıԀ ɹǝʌןıS",
   "item.animamundi.silver_shovel": "ןǝʌoɥS ɹǝʌןıS",
   "item.animamundi.silver_sword": "pɹoʍS ɹǝʌןıS",
-  "item.animamundi.simple_grappling_hook": "ʞooH buıןddɐɹ⅁ ǝןdɯıS",
   "item.animamundi.toxin": "uıxo⟘",
   "item.animamundi.wailing_shield": "pןǝıɥS buıןıɐM"
 }

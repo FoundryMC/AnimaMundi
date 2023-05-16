@@ -24,9 +24,9 @@ class HookEntity(type: EntityType<*>, pLevel: Level) : Entity(type, pLevel) {
     var entityBoundID: Int = 0
 
     /**
-     * List of points in the verlet/xpbd GAX style simulation
-     * Point [0] is anchored to the end of the hook
-     * Point [size - 1] is anchored to the player
+     * List of points in the verlet/xpbd GAX style simulation.
+     * Point [0] is anchored to the end of the hook.
+     * Point [size - 1] is anchored to the player.
      */
     var points = mutableListOf<Vec3>()
     var prevPoints = mutableListOf<Vec3>()
