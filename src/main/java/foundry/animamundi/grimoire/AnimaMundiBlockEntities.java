@@ -2,10 +2,12 @@ package foundry.animamundi.grimoire;
 
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
-import foundry.animamundi.AnimaMundi;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import foundry.animamundi.content.block.alembic.AlembicBlockEntity;
 import foundry.animamundi.content.block.alembic.AlembicBlockEntityRenderer;
 import foundry.animamundi.content.block.mortar.MortarBlockEntity;
+import foundry.animamundi.content.brain.cortex.block.CortexBlock;
+import foundry.animamundi.content.brain.cortex.block.CortexBlockEntity;
 
 
 public class AnimaMundiBlockEntities {
@@ -20,5 +22,14 @@ public class AnimaMundiBlockEntities {
 
     public static BlockEntityEntry<MortarBlockEntity> MORTAR = REGISTRATE.blockEntity("mortar", MortarBlockEntity::new)
             .validBlock(AnimaMundiBlocks.MORTAR)
+            .register();
+
+    public static BlockEntityEntry<CortexBlockEntity> CORTEX = REGISTRATE.blockEntity("cortex", CortexBlockEntity::new)
+            .transform(x -> {
+                for (BlockEntry<CortexBlock> cortex : AnimaMundiBlocks.CORTICES) {
+                    x.validBlock(cortex);
+                }
+                return x;
+            })
             .register();
 }

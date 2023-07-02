@@ -9,6 +9,9 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import foundry.animamundi.content.block.alembic.AlembicBlock;
 import foundry.animamundi.content.block.mortar.MortarBlock;
+import foundry.animamundi.content.brain.cortex.CortexEntry;
+import foundry.animamundi.content.brain.cortex.CortexRegistry;
+import foundry.animamundi.content.brain.cortex.block.CortexBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,6 +23,8 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ModelFile;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 
 public class AnimaMundiBlocks {
@@ -68,4 +73,39 @@ public class AnimaMundiBlocks {
             .blockstate(AnimaMundiBlocks::simple)
             .item().transform(customItemModel())
             .register();
+
+    public static BlockEntry<Block> ENTRAILS = REGISTRATE.block("entrails", Block::new)
+            .initialProperties(Material.SCULK)
+            .tag(AnimaMundiTags.LIVING)
+            .properties(s -> s.color(MaterialColor.COLOR_RED).dynamicShape())
+            .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry()))
+            .simpleItem()
+            .register();
+
+
+    // CORTICES
+    public static List<BlockEntry<CortexBlock>> CORTICES = new ArrayList<>();
+    public static BlockEntry<CortexBlock> POSITIVE_CORTEX = simpleCortex("positive_cortex", CortexRegistry.INSTANCE.getPositive());
+    public static BlockEntry<CortexBlock> RAGE_CORTEX = simpleCortex("rage_cortex", CortexRegistry.INSTANCE.getRage());
+    public static BlockEntry<CortexBlock> PANIC_CORTEX = simpleCortex("panic_cortex", CortexRegistry.INSTANCE.getPanic());
+    public static BlockEntry<CortexBlock> DORMANT_CORTEX = simpleCortex("dormant_cortex", CortexRegistry.INSTANCE.getDormant());
+    public static BlockEntry<CortexBlock> COMBINATION_CORTEX = simpleCortex("combination_cortex", CortexRegistry.INSTANCE.getCombination());
+    public static BlockEntry<CortexBlock> MOTOR_CORTEX = simpleCortex("motor_cortex", CortexRegistry.INSTANCE.getMotor());
+
+    private static BlockEntry<CortexBlock> simpleCortex(String id, CortexEntry<?> entry) {
+        BlockEntry<CortexBlock> blockEntry = REGISTRATE.block(id, x -> {
+                    CortexBlock cortex = new CortexBlock(x, entry);
+                    return cortex;
+                })
+                .initialProperties(Material.SCULK)
+                .properties(s -> s.color(MaterialColor.COLOR_RED).dynamicShape())
+                .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry()))
+                .tag(AnimaMundiTags.LIVING)
+                .simpleItem()
+                .register();
+
+        CORTICES.add(blockEntry);
+
+        return blockEntry;
+    }
 }

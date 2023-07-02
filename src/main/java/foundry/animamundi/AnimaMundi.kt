@@ -62,6 +62,7 @@ class AnimaMundi {
         const val MODID = "animamundi"
         private val LOGGER = LogUtils.getLogger()
         val REGISTRATE = NonNullSupplier.lazy { Registrate.create(MODID) }
+
         @JvmStatic
         fun registrate(): Registrate {
             return REGISTRATE.get()
