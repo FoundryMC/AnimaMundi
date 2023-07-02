@@ -17,6 +17,7 @@ class CortexBlockEntity(pType: BlockEntityType<*>, pPos: BlockPos, pBlockState: 
             val block = blockState.block
             if (block is CortexBlock) {
                 cortex = block.cortexEntry.newCortex()
+                cortex!!.registerDefaults()
             }
         }
     }
@@ -54,6 +55,8 @@ class CortexBlockEntity(pType: BlockEntityType<*>, pPos: BlockPos, pBlockState: 
 
         if (!level!!.isClientSide) {
             makeCortexIfNone()
+
+            if (!pTag.contains("dependencies")) return;
             val dependencyTag = pTag.getCompound("dependencies")
 
             dependencyTag.allKeys.forEach {

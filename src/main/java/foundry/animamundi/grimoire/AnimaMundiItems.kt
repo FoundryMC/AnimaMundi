@@ -6,6 +6,7 @@ import com.tterrag.registrate.util.entry.ItemEntry
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer
 import foundry.animamundi.AnimaMundi
 import foundry.animamundi.content.item.AnimaMundiItemMaterials
+import foundry.animamundi.content.item.NerveBundleItem
 import foundry.animamundi.content.item.antidote.AntidoteItem
 import net.minecraft.world.item.*
 import net.minecraft.world.item.Item.Properties
@@ -56,6 +57,8 @@ object AnimaMundiItems {
     val ANTIMONY_PICKAXE: ItemEntry<Item> = REGISTRATE.item<Item>("antimony_pickaxe") { props: Properties ->  PickaxeItem(AnimaMundiItemMaterials.ANTIMONY_TOOLS, 3, -2.4f, props) }.register()
     val ANTIMONY_SHOVEL: ItemEntry<Item> = REGISTRATE.item<Item>("antimony_shovel") { props: Properties ->  ShovelItem(AnimaMundiItemMaterials.ANTIMONY_TOOLS, 3f, -2.4f, props) }.register()
     val ANTIMONY_SWORD: ItemEntry<Item> = REGISTRATE.item<Item>("antimony_sword") { props: Properties ->  SwordItem(AnimaMundiItemMaterials.ANTIMONY_TOOLS, 3, -2.4f, props) }.register()
+
+    val NERVE_BUNDLE: ItemEntry<NerveBundleItem> = REGISTRATE.item<NerveBundleItem>("nerve_bundle") { props: Properties -> NerveBundleItem(props) }.register()
 
     val WAILING_SHIELD: ItemEntry<Item> = REGISTRATE.item<Item>("wailing_shield") { props: Properties ->
         ShieldItem(

@@ -12,6 +12,7 @@ import foundry.animamundi.content.block.mortar.MortarBlock;
 import foundry.animamundi.content.brain.cortex.CortexEntry;
 import foundry.animamundi.content.brain.cortex.CortexRegistry;
 import foundry.animamundi.content.brain.cortex.block.CortexBlock;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -75,13 +76,22 @@ public class AnimaMundiBlocks {
             .register();
 
     public static BlockEntry<Block> ENTRAILS = REGISTRATE.block("entrails", Block::new)
-            .initialProperties(Material.SCULK)
+            .initialProperties(AnimaMundiMaterials.FLESH)
             .tag(AnimaMundiTags.LIVING)
-            .properties(s -> s.color(MaterialColor.COLOR_RED).dynamicShape())
+            .properties(s -> s.destroyTime(1.5f))
             .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry()))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .simpleItem()
             .register();
 
+    public static BlockEntry<Block> GREY_MATTER = REGISTRATE.block("grey_matter", Block::new)
+            .initialProperties(AnimaMundiMaterials.BRAIN)
+            .tag(AnimaMundiTags.LIVING)
+            .properties(s -> s.destroyTime(1.5f))
+            .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry()))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .simpleItem()
+            .register();
 
     // CORTICES
     public static List<BlockEntry<CortexBlock>> CORTICES = new ArrayList<>();

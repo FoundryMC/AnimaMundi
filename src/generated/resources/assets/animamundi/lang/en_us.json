@@ -1,6 +1,7 @@
 {
   "block.animamundi.alembic": "Alembic",
   "block.animamundi.entrails": "Entrails",
+  "block.animamundi.grey_matter": "Grey Matter",
   "block.animamundi.mortar": "Mortar",
   "entity.animamundi.hook": "Hook",
   "item.animamundi.antidote": "Antidote",
@@ -14,6 +15,7 @@
   "item.animamundi.aramid_fabric": "Aramid Fabric",
   "item.animamundi.bone_ash": "Bone Ash",
   "item.animamundi.miasmane_ingot": "Miasmane Ingot",
+  "item.animamundi.nerve_bundle": "Nerve Bundle",
   "item.animamundi.pestle": "Pestle",
   "item.animamundi.raw_silver": "Raw Silver",
   "item.animamundi.sedative": "Sedative",
