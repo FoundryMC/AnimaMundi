@@ -7,13 +7,13 @@
     ],
     "key": {
         "c": {
-            "item": "minecraft:copper_ingot"
+            "tag": "forge:ingots/silver"
         },
         "G": {
             "item": "minecraft:glass_bottle"
         },
         "i": {
-            "item": "animamundi:silver_ingot"
+            "item": "minecraft:iron_ingot"
         }
     },
     "result": {

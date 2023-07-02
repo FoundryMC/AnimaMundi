@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "animamundi:silver_nugget"
+            "tag": "forge:nuggets/silver"
         },
         "D": {
             "item": "minecraft:diorite"
