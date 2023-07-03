@@ -68,16 +68,32 @@ class NerveBundleItem(props: Properties) : Item(props) {
         val a = first.cortex!!
         val b = second.cortex!!
 
+        a.inputDependencies.toMutableMap().forEach { (t, u) ->
+            if (u.other == second.blockPos) {
+
+                val component = Component.literal("Removed connection between ${first.blockPos} and ${second.blockPos}")
+                    .withStyle(ChatFormatting.RED)
+                player.displayClientMessage(component, true)
+
+                // remove
+                a.inputDependencies.remove(t)
+
+                return;
+            }
+        }
 
         a.outputs.forEach { outType ->
             b.inputs.forEach { (str, type) ->
                 if (type.allowed(outType)) {
-                    b.inputDependencies[str] = Cortex.Dependency(first.blockPos, outType)
+                    if (!b.inputDependencies.containsKey(str)) {
+                        b.inputDependencies[str] = Cortex.Dependency(first.blockPos, outType)
 
-                    val component = Component.literal("Connected ${first.blockPos} to ${second.blockPos}").withStyle(ChatFormatting.GREEN)
-                    player.displayClientMessage(component, true)
+                        val component = Component.literal("Connected ${first.blockPos} to ${second.blockPos}")
+                            .withStyle(ChatFormatting.GREEN)
+                        player.displayClientMessage(component, true)
 
-                    return;
+                        return;
+                    }
                 }
             }
         }
