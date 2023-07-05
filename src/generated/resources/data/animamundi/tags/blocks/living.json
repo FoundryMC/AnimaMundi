@@ -1,6 +1,15 @@
 {
   "values": [
     "animamundi:entrails",
-    "animamundi:grey_matter"
+    "animamundi:grey_matter",
+    "animamundi:active_cortex",
+    "animamundi:chaotic_cortex",
+    "animamundi:positive_cortex",
+    "animamundi:rage_cortex",
+    "animamundi:panic_cortex",
+    "animamundi:dormant_cortex",
+    "animamundi:combination_cortex",
+    "animamundi:motor_cortex",
+    "animamundi:redstone_cortex"
   ]
 }

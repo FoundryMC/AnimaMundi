@@ -95,12 +95,15 @@ public class AnimaMundiBlocks {
 
     // CORTICES
     public static List<BlockEntry<CortexBlock>> CORTICES = new ArrayList<>();
+    public static BlockEntry<CortexBlock> ACTIVE_CORTEX = simpleCortex("active_cortex", CortexRegistry.INSTANCE.getActive());
+    public static BlockEntry<CortexBlock> CHAOTIC_CORTEX = simpleCortex("chaotic_cortex", CortexRegistry.INSTANCE.getChaotic());
     public static BlockEntry<CortexBlock> POSITIVE_CORTEX = simpleCortex("positive_cortex", CortexRegistry.INSTANCE.getPositive());
     public static BlockEntry<CortexBlock> RAGE_CORTEX = simpleCortex("rage_cortex", CortexRegistry.INSTANCE.getRage());
     public static BlockEntry<CortexBlock> PANIC_CORTEX = simpleCortex("panic_cortex", CortexRegistry.INSTANCE.getPanic());
     public static BlockEntry<CortexBlock> DORMANT_CORTEX = simpleCortex("dormant_cortex", CortexRegistry.INSTANCE.getDormant());
     public static BlockEntry<CortexBlock> COMBINATION_CORTEX = simpleCortex("combination_cortex", CortexRegistry.INSTANCE.getCombination());
     public static BlockEntry<CortexBlock> MOTOR_CORTEX = simpleCortex("motor_cortex", CortexRegistry.INSTANCE.getMotor());
+    public static BlockEntry<CortexBlock> REDSTONE_CORTEX = simpleCortex("redstone_cortex", CortexRegistry.INSTANCE.getRedstone());
 
     private static BlockEntry<CortexBlock> simpleCortex(String id, CortexEntry<?> entry) {
         BlockEntry<CortexBlock> blockEntry = REGISTRATE.block(id, x -> {
@@ -109,7 +112,7 @@ public class AnimaMundiBlocks {
                 })
                 .initialProperties(Material.SCULK)
                 .properties(s -> s.color(MaterialColor.COLOR_RED).dynamicShape())
-                .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry()))
+                .blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry(), prov.cubeAll(GREY_MATTER.get())))
                 .tag(AnimaMundiTags.LIVING)
                 .simpleItem()
                 .register();

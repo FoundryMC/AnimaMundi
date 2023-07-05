@@ -3,6 +3,7 @@ package foundry.animamundi.content.brain.cortex
 import foundry.animamundi.AnimaMundi
 import foundry.animamundi.content.brain.cortex.cortices.CombinationCortex
 import foundry.animamundi.content.brain.cortex.cortices.MotorCortex
+import foundry.animamundi.content.brain.cortex.cortices.redstone.RedstoneCortex
 import foundry.animamundi.content.brain.cortex.cortices.constants.*
 import net.minecraft.resources.ResourceLocation
 
@@ -30,11 +31,16 @@ object CortexRegistry {
         return inverseRegistry[entry]
     }
 
+    val active = simple("active") { ActiveCortex() }
+    val chaotic = simple("chaotic") { ChaoticCortex() }
     val positive = simple("positive") { PositiveCortex() }
     val rage = simple("rage") { RageCortex() }
     val dormant = simple("dormant") { DormantCortex() }
     val panic = simple("panic") { PanicCortex() }
     val motor = simple("motor") { MotorCortex() }
     val combination = simple("combination") { CombinationCortex() }
+    val redstone = simple("redstone") { RedstoneCortex() }
+
+
 
 }

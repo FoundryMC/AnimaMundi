@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker
 import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
 
-class CortexBlock(pProperties: Properties, val cortexEntry: CortexEntry<*>) : EntityBlock, Block(pProperties) {
+open class CortexBlock(pProperties: Properties, val cortexEntry: CortexEntry<*>) : EntityBlock, Block(pProperties) {
     override fun newBlockEntity(pPos: BlockPos, pState: BlockState): BlockEntity {
         return CortexBlockEntity(AnimaMundiBlockEntities.CORTEX.get(), pPos, pState)
     }
